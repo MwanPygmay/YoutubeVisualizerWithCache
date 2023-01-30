@@ -10,7 +10,7 @@ export class HistoryService {
   constructor(private database: DatabaseService) {}
 
   addUrlToHistory(newUrl: string) {
-    if (!(newUrl in this.history)) {
+    if (!(this.history.includes(newUrl))) {
       this.history.push(newUrl);
       this.database.addUrlToHistory(newUrl);
     }

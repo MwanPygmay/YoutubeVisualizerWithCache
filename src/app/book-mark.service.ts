@@ -14,7 +14,7 @@ export class BookMarkService {
   getURL(){return this.searchBarService.getURL()}
 
   addUrlTobookmarks(newUrl: string) {
-    if (!(newUrl in this.bookmarks)) {
+    if (!(this.bookmarks.includes(newUrl))) {
       this.bookmarks.push(newUrl);
       this.database.addUrlToBookmarks(newUrl);
     }
