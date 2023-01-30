@@ -1,0 +1,7 @@
+<div *ngIf="historyService.history.length">
+
+    <h2>history</h2>
+    
+    <div *ngFor='let message of historyService.history'> <button type="button" class="changeURL" (click)="searchBarService.changeURL(message)">{{message}}</button> </div>
+  
+</div>
